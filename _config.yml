@@ -8,13 +8,13 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "mint" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Iker Caballero Bragagnini"
 title_separator          : "-"
 name                     : &name "Iker Caballero Bragagnini"
 description              : &description "Iker Caballero Bragagnini's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
 url: "https://ikercb2000.github.io"
-baseurl: "/ikercb2000.github.io"
+baseurl: ""
 repository: "ikercb2000/ikercb2000.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
