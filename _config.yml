@@ -22,7 +22,7 @@ repository: "ikercb2000/ikercb2000.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_linkedin.jpeg"
+  avatar           : "profile.png"
   name             : "Iker Caballero Bragagnini"
   pronouns         : # example: "she/her"  
   bio              : "PhD student in Data-Driven Engineering & Sciences at the University of Bristol, specialising in statistical learning theory, stochastic modelling and financial engineering."
