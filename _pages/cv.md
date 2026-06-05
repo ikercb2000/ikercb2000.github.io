@@ -26,13 +26,11 @@ redirect_from:
 
 * **MSc in Mathematical Engineering**, Universitat Oberta de Catalunya, 2023 - 2025
 
-  * Final grade: 9.2/10
   * Specialisation: Simulation, Differential Equations, Numerical Methods, Machine Learning
   * Dissertation: *Artificial Neural Networks for Financial Time Series: Forecasts and Loss Functions*
 
 * **MSc in Statistics and Operations Research**, Universitat Politècnica de Catalunya, 2022 - 2024
 
-  * Final grade: 8.6/10
   * Scholarships: Santander Master + UB Scholarship and Bosch-Gimpera Foundation Scholarship
   * Specialisation: Advanced Probability, Time Series, Statistical Learning, Optimization
   * Dissertation: *Probabilistic and Statistical Methods for Power Laws in Complex Systems: Applications to Finance*
@@ -40,7 +38,7 @@ redirect_from:
 * **BSc in Economics with Mathematics Minor**, Universitat Pompeu Fabra, 2018 - 2022
 
   * Top 10 student in a cohort of more than 100 students
-  * Advanced Programme at the Barcelona School of Economics
+  * Advanced Undergraduate Programme at the Barcelona School of Economics to attend MSc modules
   * Dissertation: *The SABR Model in Financial Practice*
 
 # Work experience
