@@ -1,0 +1,58 @@
+/* Dated updates below the homepage introduction. */
+.page__content .news-timeline {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    column-gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+
+    @include breakpoint($medium) {
+      grid-template-columns: 5.5rem minmax(0, 1fr);
+      column-gap: 1.25rem;
+    }
+
+    &:last-child .news-timeline__content {
+      padding-bottom: 0;
+      border-left-color: transparent;
+    }
+  }
+
+  &__date {
+    padding-top: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  &__content {
+    position: relative;
+    min-width: 0;
+    padding: 0 0 1.75rem 1.25rem;
+    border-left: 1px solid var(--global-border-color);
+
+    &::before {
+      position: absolute;
+      top: 0.45rem;
+      left: calc(-0.3rem - 0.5px);
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background-color: var(--global-base-color);
+      content: "";
+    }
+
+    p {
+      margin: 0;
+      text-align: left;
+      hyphens: none;
+      overflow-wrap: break-word;
+    }
+  }
+}

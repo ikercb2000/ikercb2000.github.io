@@ -28,13 +28,14 @@ author:
   bio              : "PhD student in Data-Driven Engineering & Sciences at the University of Bristol, specialising in uncertainty quantification and multi-agent systems."
   location         : "Bristol, UK"
   employer         : "University of Bristol"
-  uri              : # URL
+  uri              : "https://www.statlerdo.com/"
   email            : "ikercb2000@gmail.com" 
+  university_email : "ho26984@bristol.ac.uk"
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=FhyREfAAAAAJ&hl=es"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/yourorcidurl"
