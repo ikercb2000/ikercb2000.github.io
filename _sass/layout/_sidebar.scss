@@ -70,6 +70,70 @@
     top: calc(#{$masthead-height} + 2em);
     height: auto;
     padding-top: 0;
+
+    .author__avatar {
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .author__content {
+      text-align: center;
+    }
+
+    .author__name {
+      margin: 1.25rem 0 0.75rem;
+      font-size: 1.65rem;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .author__bio {
+      font-size: 0.875rem;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .author__urls-wrapper {
+      width: 100%;
+      cursor: default;
+    }
+
+    .author__urls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75em 1.1em;
+      width: 100%;
+      z-index: auto;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        margin: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .icon-pad-right {
+        flex-shrink: 0;
+        padding-right: 0;
+        margin-right: 0.4em;
+      }
+    }
   }
 }
 
