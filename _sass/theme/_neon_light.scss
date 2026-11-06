@@ -2,27 +2,27 @@
   NEON THEME - LIGHT VERSION
   ========================================================================== */
 /* Color codes used for the theme */
-$primary-color              : #76ff03;
+$primary-color              : #0055ff;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#fff, $primary-color, 50%);
 $lighter-primary-color      : mix(#fff, $primary-color, 90%);
-$background                 : #080b09;
-$background-light           : #101710;
-$background-lighter        : #172117;
-$text                      : #e8f0e6;
-$text-muted                : #a5b5a2;
-$link                      : #76ff03;
-$link-dark                 : #b0ff70;
-$link-light                : #9cde6b;
-$footer                    : #050705;
-$border                    : #263b26;
-$border-dark               : #345434;
+$background                 : #f8fbff;
+$background-light           : #edf4ff;
+$background-lighter        : #e2ecff;
+$text                      : #172338;
+$text-muted                : #52627a;
+$link                      : #0055ff;
+$link-dark                 : #003dcc;
+$link-light                : #5146c8;
+$footer                    : #eef4ff;
+$border                    : #ccdafa;
+$border-dark               : #a9c0ef;
 
 /* Color codes used for the site */
 $danger-color               : #e74c3c;
-$info-color                 : #76ff03;
-$notice-color               : #76ff03;
+$info-color                 : #0055ff;
+$notice-color               : #0055ff;
 $success-color              : #76ff03;
 $warning-color              : #f39c12;
 
@@ -36,9 +36,12 @@ $navicon-height             : 4px;
 $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
-/* Default charcoal palette; both modes keep the electronic appearance. */
+/* White and electric blue when the theme toggle selects light mode. */
 :root {
-  color-scheme                        : dark;
+  color-scheme                        : light;
+  --neon-glow-rgb                     : 0, 85, 255;
+  --neon-button-text-color            : #ffffff;
+  --neon-heading-color                : #0646c4;
   --global-toc-bg-color               : #{$background-light};
   --global-base-color                 : #{$primary-color};
   --global-bg-color                   : #{$background};
