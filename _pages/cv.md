@@ -15,13 +15,14 @@ redirect_from:
 
 * **Ph.D. in Data-Driven Engineering & Sciences**, University of Bristol, 2026 - Present
 
-  * Full Scholarship, School of Engineering Mathematics and Technology
-  * Specialisation: Statistical Learning Theory and Financial Engineering
+  * Scholarships: Full DTE Scholarship of the School of Engineering Mathematics and Technology
+  * Specialisation: Uncertainty Quantification in Multi-Agent Systems
 
 * **MSc in Mathematical Finance**, University of Warwick, 2025 - 2026
 
-  * Warwick Business School merit-based scholarship
+  * Scholarships: Warwick Business School merit-based scholarship
   * Specialisation: C++, Advanced Probability, Stochastic Calculus, Statistical Learning Theory
+  * Dissertation: *Machine Learning with Choquet Integrals for Risk Management and Decision Making*
 
 * **MSc in Mathematical Engineering**, Universitat Oberta de Catalunya, 2023 - 2025
 
@@ -37,7 +38,8 @@ redirect_from:
 * **BSc in Economics with Mathematics Minor**, Universitat Pompeu Fabra, 2018 - 2022
 
   * Top 10 student in a cohort of more than 100 students
-  * Advanced Undergraduate Programme at the Barcelona School of Economics to attend MSc modules
+  * Scholarships: Highest honours in 13 modules
+  * Advanced Undergraduate Programme at the Barcelona School of Economics to take MSc modules
   * Dissertation: *The SABR Model in Financial Practice*
 
 # Work experience
@@ -63,7 +65,7 @@ redirect_from:
 
 # Skills
 
-* **Programming:** Python, Rust, C++, R, SAS, SQL
+* **Programming:** Python, Rust, C++, Lean, SAS, SQL
 * **Python libraries:** Polars, NumPy, CUDA and related scientific computing tools
 * **C++ tools:** QuantLib, Boost, CMake
 * **R tools:** Tidyverse, ggplot2, dplyr
