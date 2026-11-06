@@ -60,6 +60,19 @@
   }
 }
 
+// Use the space reserved by .page's left padding without moving the article.
+.main--single > .sidebar {
+  @include breakpoint($large) {
+    width: calc(#{100% - span(10 of 12) + span(3 of 12 wide)} - 3em);
+    max-width: none;
+    margin-right: -100%;
+    position: sticky;
+    top: calc(#{$masthead-height} + 2em);
+    height: auto;
+    padding-top: 0;
+  }
+}
+
 .sidebar__right {
   margin-bottom: 1em;
 
