@@ -38,6 +38,10 @@
   margin-top: 0;
   line-height: 1;
 
+  @include breakpoint($large) {
+    text-align: center;
+  }
+
   & + .page__meta {
     margin-top: -0.5em;
   }
@@ -49,6 +53,18 @@
 }
 
 .page__content {
+
+  @include breakpoint($large) {
+    > h1, > h2, > h3 {
+      text-align: center;
+    }
+
+    p, li {
+      text-align: justify;
+      hyphens: auto;
+      overflow-wrap: break-word;
+    }
+  }
 
   h2 {
     padding-bottom: 0.5em;
