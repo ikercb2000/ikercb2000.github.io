@@ -68,7 +68,6 @@ redirect_from:
 * **Programming:** Python, Rust, C++, Lean, SAS, SQL
 * **Python libraries:** Polars, NumPy, CUDA and related scientific computing tools
 * **C++ tools:** QuantLib, Boost, CMake
-* **R tools:** Tidyverse, ggplot2, dplyr
 * **Quantitative methods:** Stochastic modelling, statistical learning, time series, optimization, financial forecasting, risk management
 * **Languages:** Spanish and Catalan native; English proficient; Chinese intermediate and German basic
 
