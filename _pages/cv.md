@@ -72,13 +72,11 @@ redirect_from:
 
 # Research interests
 
+* Uncertainty Quantification
+* Sequential Decision-Making
 * Statistical Learning Theory
 * Stochastic Modelling
 * Financial Engineering
-* Quantitative Finance
-* Machine Learning for Financial Time Series
-* Risk Modelling and Decision-Making under Uncertainty
-* Complex Systems and Econophysics
 
 # Service and leadership
 
