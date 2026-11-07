@@ -34,7 +34,9 @@
   }
 }
 
-.page--home .page__inner-wrap {
+.page--home .page__inner-wrap,
+.page--research .page__inner-wrap,
+.page--cv .page__inner-wrap {
   @include breakpoint($large) {
     width: 110%;
     position: relative;

@@ -1,0 +1,23 @@
+<ol class="cv-timeline" role="list">
+  {% for entry in include.items %}
+  <li class="cv-timeline__item">
+    <span class="cv-timeline__icon" aria-hidden="true"><i class="fas fa-{{ include.icon }}"></i></span>
+    <div class="cv-timeline__body">
+      <h3 class="cv-timeline__title">{{ entry.title | escape }}</h3>
+      <p class="cv-timeline__organisation">{{ entry.organisation | escape }}</p>
+      <p class="cv-timeline__period">{{ entry.period | escape }}</p>
+      {% if include.bullets %}
+      <ul class="cv-timeline__details cv-timeline__details--bullets">
+        {% for detail in entry.details %}
+        <li>{{ detail | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <div class="cv-timeline__details">
+        {% for detail in entry.details %}{{ detail | markdownify }}{% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ol>

@@ -1,0 +1,67 @@
+---
+layout: single
+title: "Research"
+permalink: /research/
+author_profile: true
+page_class: page--research
+excerpt: "Publications, talks and other projects by Iker Caballero Bragagnini."
+---
+
+{% assign publications = site.publications | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
+{% assign talks = site.talks | where_exp: "item", "item.published != false" | sort: "date" | reverse %}
+{% assign projects = site.portfolio | where_exp: "item", "item.published != false" %}
+
+<p class="research-intro">
+  Publications, talks and other projects.
+  {% if site.author.googlescholar %}
+    You can also find my work on <a href="{{ site.author.googlescholar | escape }}">Google Scholar</a>.
+  {% endif %}
+</p>
+
+<nav class="research-jump-links" aria-label="Research sections">
+  <a href="#publications">Publications</a>
+  <a href="#talks">Talks &amp; presentations</a>
+  <a href="#other-projects">Other projects</a>
+</nav>
+
+<section class="research-section" id="publications" aria-labelledby="publications-title">
+  <h2 id="publications-title">Publications</h2>
+  <div class="research-cards">
+    {% for item in publications %}
+      {% include research-card.html item=item kind="publication" %}
+    {% else %}
+      <div class="research-empty">
+        <i class="fas fa-file-lines" aria-hidden="true"></i>
+        <p>Publications will be added here.</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="research-section" id="talks" aria-labelledby="talks-title">
+  <h2 id="talks-title">Talks &amp; presentations</h2>
+  <div class="research-cards">
+    {% for item in talks %}
+      {% include research-card.html item=item kind="talk" %}
+    {% else %}
+      <div class="research-empty">
+        <i class="fas fa-microphone-lines" aria-hidden="true"></i>
+        <p>Talks and presentations will be added here.</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="research-section" id="other-projects" aria-labelledby="other-projects-title">
+  <h2 id="other-projects-title">Other projects</h2>
+  <div class="research-cards">
+    {% for item in projects %}
+      {% include research-card.html item=item kind="project" %}
+    {% else %}
+      <div class="research-empty">
+        <i class="fas fa-code" aria-hidden="true"></i>
+        <p>Other projects will be added here.</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>

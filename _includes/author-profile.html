@@ -175,7 +175,7 @@
       {% if author.uri %}
       <li>
         <a class="author__social-link" href="{{ author.uri | escape }}">
-          <i class="fas fa-globe" aria-hidden="true"></i>
+          {% include icons/website.svg %}
           <span>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span>
         </a>
       </li>

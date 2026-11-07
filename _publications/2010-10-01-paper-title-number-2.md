@@ -1,4 +1,7 @@
 ---
+image: "/images/research-example-publication.svg"
+published: true
+example: true # Demonstration content, not a real publication or talk
 title: "Paper Title Number 2"
 collection: publications
 category: manuscripts

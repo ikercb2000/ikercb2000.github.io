@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <rect width="320" height="200" rx="12" fill="#111b2c"/>
+  <rect x="22" y="25" width="4" height="148" rx="2" fill="#76ff03"/>
+  <text x="43" y="47" fill="#76ff03" font-family="Arial, sans-serif" font-size="11" letter-spacing="2">EXAMPLE TALK</text>
+  <text x="43" y="90" fill="#f8fbff" font-family="Arial, sans-serif" font-size="25" font-weight="700">Presentation</text>
+  <text x="43" y="121" fill="#f8fbff" font-family="Arial, sans-serif" font-size="25" font-weight="700">preview</text>
+  <path d="M43 149h152M43 161h105" fill="none" stroke="#607a9e" stroke-width="4"/>
+  <circle cx="272" cy="157" r="20" fill="none" stroke="#0055ff" stroke-width="2"/>
+  <path d="M262 157h20m-10-10v20" stroke="#76ff03" stroke-width="2"/>
+</svg>

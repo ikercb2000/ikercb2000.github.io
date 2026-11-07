@@ -1,0 +1,69 @@
+{% comment %}
+  Cards use publication, talk or portfolio front matter. Optional fields:
+  authors, header.teaser (or image), excerpt, tags, paperurl, doi, codeurl,
+  slidesurl, bibtexurl and projecturl. Set example: true on demonstration entries.
+{% endcomment %}
+{% assign entry = include.item %}
+{% assign preview = entry.header.teaser | default: entry.image %}
+
+<article class="research-card">
+  {% if preview %}
+    {% assign preview_start = preview | slice: 0, 1 %}
+    {% if preview contains "://" %}
+      {% assign preview_url = preview %}
+    {% elsif preview_start == "/" %}
+      {% assign preview_url = preview | relative_url %}
+    {% else %}
+      {% assign preview_url = preview | prepend: "/images/" | relative_url %}
+    {% endif %}
+    <img class="research-card__preview" src="{{ preview_url | escape }}" alt="" loading="lazy" width="320" height="200">
+  {% else %}
+    <div class="research-card__preview research-card__preview--placeholder" aria-hidden="true">
+      {% if include.kind == "talk" %}
+        <i class="fas fa-microphone-lines"></i>
+      {% elsif include.kind == "project" %}
+        <i class="fas fa-code"></i>
+      {% else %}
+        <i class="fas fa-file-lines"></i>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="research-card__body">
+    {% if entry.example %}<p class="research-card__example">Example</p>{% endif %}
+    <h3 class="research-card__title"><a href="{{ entry.url | relative_url }}">{{ entry.title | escape }}</a></h3>
+    {% if entry.authors %}
+      <p class="research-card__authors">{{ entry.authors | join: ", " | escape }}</p>
+    {% endif %}
+    {% unless include.kind == "project" %}
+    <p class="research-card__meta">
+      {% if entry.venue %}<span>{{ entry.venue | escape }}</span>{% endif %}
+      {% if include.kind == "talk" and entry.location %}<span>{{ entry.location | escape }}</span>{% endif %}
+      {% if entry.date %}
+        <time datetime="{{ entry.date | date: '%Y-%m-%d' }}">{% if include.kind == "talk" %}{{ entry.date | date: "%d %b %Y" }}{% else %}{{ entry.date | date: "%Y" }}{% endif %}</time>
+      {% endif %}
+    </p>
+    {% endunless %}
+    {% if entry.excerpt %}
+      <div class="research-card__summary">{{ entry.excerpt | markdownify }}</div>
+    {% endif %}
+    {% if entry.paperurl or entry.doi or entry.codeurl or entry.slidesurl or entry.bibtexurl or entry.projecturl %}
+      <div class="research-card__actions" aria-label="Resources for {{ entry.title | escape }}">
+        {% if entry.paperurl %}<a href="{{ entry.paperurl | escape }}">Paper</a>{% endif %}
+        {% if entry.doi %}
+          {% if entry.doi contains "://" %}{% assign doi_url = entry.doi %}{% else %}{% assign doi_url = entry.doi | prepend: "https://doi.org/" %}{% endif %}
+          <a href="{{ doi_url | escape }}">DOI</a>
+        {% endif %}
+        {% if entry.codeurl %}<a href="{{ entry.codeurl | escape }}">Code</a>{% endif %}
+        {% if entry.slidesurl %}<a href="{{ entry.slidesurl | escape }}">Slides</a>{% endif %}
+        {% if entry.bibtexurl %}<a href="{{ entry.bibtexurl | escape }}">BibTeX</a>{% endif %}
+        {% if entry.projecturl %}<a href="{{ entry.projecturl | escape }}">Website</a>{% endif %}
+      </div>
+    {% endif %}
+    {% if entry.tags.size > 0 %}
+      <ul class="research-card__tags" aria-label="Topics">
+        {% for tag in entry.tags %}<li>{{ tag | escape }}</li>{% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>

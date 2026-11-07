@@ -1,6 +1,8 @@
 ---
+example: true # Demonstration project
+image: "/images/research-example-project.svg"
 title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+excerpt: "Short description of example project 1, showing how a project summary will appear in Research."
 collection: portfolio
 ---
 
