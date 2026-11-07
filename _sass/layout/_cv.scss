@@ -1,4 +1,16 @@
 .page--cv {
+  // Keep the page's main heading accessible; Education leads the visible CV.
+  .page__title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
   .page__content p,
   .page__content li {
     text-align: left;
@@ -19,16 +31,27 @@
       padding: 0;
       border: 0;
       color: var(--global-text-color);
-      font-size: 1.5rem;
+      font-size: 1.65rem;
       line-height: 1.25;
       text-align: center;
     }
   }
 
   .cv-timeline {
+    position: relative;
     margin: 0;
     padding: 0;
     list-style: none;
+
+    &::before {
+      position: absolute;
+      top: 1rem;
+      bottom: 0;
+      left: calc(1rem - 0.5px);
+      width: 1px;
+      background: var(--global-dark-border-color);
+      content: "";
+    }
   }
 
   .cv-timeline__item {
@@ -36,22 +59,8 @@
     margin: 0;
     padding: 0 0 2.25rem 2.75rem;
 
-    &::before {
-      position: absolute;
-      top: 2rem;
-      bottom: 0;
-      left: calc(1rem - 0.5px);
-      width: 1px;
-      background: var(--global-border-color);
-      content: "";
-    }
-
     &:last-child {
       padding-bottom: 0;
-
-      &::before {
-        display: none;
-      }
     }
   }
 
@@ -66,9 +75,11 @@
     height: 2rem;
     border: 1px solid var(--global-dark-border-color);
     border-radius: 50%;
-    background: var(--global-code-background-color);
+    background: linear-gradient(rgba(var(--neon-glow-rgb, 0, 85, 255), 0.14), rgba(var(--neon-glow-rgb, 0, 85, 255), 0.14)), var(--global-bg-color);
     color: var(--global-base-color);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
+    line-height: 1;
+    z-index: 1;
   }
 
   .cv-timeline__body {

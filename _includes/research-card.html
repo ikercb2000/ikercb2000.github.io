@@ -1,7 +1,7 @@
 {% comment %}
   Cards use publication, talk or portfolio front matter. Optional fields:
   authors, header.teaser (or image), excerpt, tags, paperurl, doi, codeurl,
-  slidesurl, bibtexurl and projecturl. Set example: true on demonstration entries.
+  slidesurl, bibtexurl, projecturl, pypiurl and docsurl. Set example: true on demonstration entries.
 {% endcomment %}
 {% assign entry = include.item %}
 {% assign preview = entry.header.teaser | default: entry.image %}
@@ -47,7 +47,7 @@
     {% if entry.excerpt %}
       <div class="research-card__summary">{{ entry.excerpt | markdownify }}</div>
     {% endif %}
-    {% if entry.paperurl or entry.doi or entry.codeurl or entry.slidesurl or entry.bibtexurl or entry.projecturl %}
+    {% if entry.paperurl or entry.doi or entry.codeurl or entry.slidesurl or entry.bibtexurl or entry.projecturl or entry.pypiurl or entry.docsurl %}
       <div class="research-card__actions" aria-label="Resources for {{ entry.title | escape }}">
         {% if entry.paperurl %}<a href="{{ entry.paperurl | escape }}">Paper</a>{% endif %}
         {% if entry.doi %}
@@ -58,6 +58,8 @@
         {% if entry.slidesurl %}<a href="{{ entry.slidesurl | escape }}">Slides</a>{% endif %}
         {% if entry.bibtexurl %}<a href="{{ entry.bibtexurl | escape }}">BibTeX</a>{% endif %}
         {% if entry.projecturl %}<a href="{{ entry.projecturl | escape }}">Website</a>{% endif %}
+        {% if entry.pypiurl %}<a href="{{ entry.pypiurl | escape }}">PyPI</a>{% endif %}
+        {% if entry.docsurl %}<a href="{{ entry.docsurl | escape }}">Docs</a>{% endif %}
       </div>
     {% endif %}
     {% if entry.tags.size > 0 %}

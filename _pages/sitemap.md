@@ -5,33 +5,22 @@ permalink: /sitemap/
 author_profile: true
 ---
 
-{% include base_path %}
+{% include build-version.html %}
 
-A list of all the posts and pages found on the site. For you robots out there, there is an [XML version]({{ base_path }}/sitemap.xml) available for digesting as well.
+Explore the main sections of this website.
 
-<h2>Pages</h2>
-{% for post in site.pages %}
-  {% include archive-single.html %}
-{% endfor %}
-
-<h2>Posts</h2>
-{% for post in site.posts %}
-  {% include archive-single.html %}
-{% endfor %}
-
-{% capture written_label %}'None'{% endcapture %}
-
-{% for collection in site.collections %}
-{% unless collection.output == false or collection.label == "posts" %}
-  {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
-  <h2>{{ label }}</h2>
-  {% capture written_label %}{{ label }}{% endcapture %}
-  {% endif %}
-{% endunless %}
-{% for post in collection.docs %}
-  {% unless collection.output == false or collection.label == "posts" %}
-  {% include archive-single.html %}
-  {% endunless %}
-{% endfor %}
-{% endfor %}
+<ul>
+  <li><a href="{{ '/' | relative_url }}?v={{ build_version }}">Home</a></li>
+  {% for link in site.data.navigation.main %}
+  <li>
+    <a href="{% if link.url contains 'http' %}{{ link.url }}{% else %}{{ link.url | relative_url }}?v={{ build_version }}{% endif %}">{{ link.title | escape }}</a>
+    {% if link.url == '/research/' %}
+    <ul>
+      <li><a href="{{ '/research/' | relative_url }}?v={{ build_version }}#publications">Publications</a></li>
+      <li><a href="{{ '/research/' | relative_url }}?v={{ build_version }}#talks">Talks &amp; presentations</a></li>
+      <li><a href="{{ '/research/' | relative_url }}?v={{ build_version }}#other-projects">Other projects</a></li>
+    </ul>
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

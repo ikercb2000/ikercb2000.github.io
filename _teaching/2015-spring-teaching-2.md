@@ -1,4 +1,5 @@
 ---
+published: false # Template example; replaced by the personalised Teaching page
 title: "Teaching experience 2"
 collection: teaching
 type: "Workshop"

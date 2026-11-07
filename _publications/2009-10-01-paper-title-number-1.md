@@ -1,6 +1,6 @@
 ---
 image: "/images/research-example-publication.svg"
-published: true
+published: false # Hidden example; kept for future reference
 example: true # Demonstration content, not a real publication or talk
 title: "Paper Title Number 1"
 collection: publications

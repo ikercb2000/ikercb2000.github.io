@@ -1,0 +1,136 @@
+.page--teaching {
+  .page__title,
+  .page__content p,
+  .page__content li {
+    text-align: left;
+    hyphens: none;
+  }
+
+  .teaching-intro {
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .teaching-institution {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding-bottom: 1.1rem;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  .teaching-institution__icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 1px solid var(--global-dark-border-color);
+    border-radius: 7px;
+    background: var(--global-code-background-color);
+    color: var(--global-base-color);
+    font-size: 1.25rem;
+  }
+
+  .teaching-institution__name {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--global-text-color);
+    font-size: 1rem;
+    line-height: 1.4;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-base-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .teaching-institution__programme {
+    margin: 0.15rem 0 0;
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    a {
+      color: var(--global-text-color-light);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-base-color);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .teaching-entry {
+    padding-top: 1.25rem;
+
+    > p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+    }
+  }
+
+  .teaching-entry__heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.4rem 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .teaching-entry__role {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .teaching-entry__status {
+    color: var(--global-text-color-light);
+    font-size: 0.75rem;
+  }
+
+  .teaching-focus-grid {
+    display: grid;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+
+    @include breakpoint($medium) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .teaching-focus {
+    padding-top: 0.8rem;
+    border-top: 2px solid var(--global-base-color);
+
+    h4 {
+      margin: 0 0 0.65rem;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    p {
+      margin: 0;
+      color: var(--global-text-color-light);
+      font-size: 0.8rem;
+      line-height: 1.75;
+    }
+  }
+}
