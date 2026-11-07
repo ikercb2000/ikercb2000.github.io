@@ -36,9 +36,6 @@
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
       {% endif %}
-      {% if author.university_email %}
-        <li><a href="mailto:{{ author.university_email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>Bristol email</a></li>
-      {% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}
@@ -176,4 +173,32 @@
       {% endif %}      
     </ul>
   </div>
+
+  {% if author.social_media %}
+  <div class="author__social-media">
+    <h4 class="author__social-heading">Social media</h4>
+    <ul class="author__social-list">
+      {% for profile in author.social_media %}
+      <li>
+        {% if profile.url != blank %}
+        <a class="author__social-link" href="{{ profile.url | escape }}">
+        {% else %}
+        <span class="author__social-link author__social-link--pending" title="{{ profile.name | escape }}: coming soon">
+        {% endif %}
+          {% if profile.icon == "xiaohongshu" %}
+            {% include icons/xiaohongshu.svg %}
+          {% else %}
+            <i class="fab fa-{{ profile.icon }}" aria-hidden="true"></i>
+          {% endif %}
+          <span>{{ profile.name }}</span>
+        {% if profile.url != blank %}
+        </a>
+        {% else %}
+        </span>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
 </div>

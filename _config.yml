@@ -29,8 +29,8 @@ author:
   location         : "Bristol, UK"
   employer         : "University of Bristol"
   uri              : "https://www.statlerdo.com/"
-  email            : "ikercb2000@gmail.com" 
-  university_email : "ho26984@bristol.ac.uk"
+  email            : "ho26984@bristol.ac.uk"
+  contact_email    : "statlerdo@gmail.com" # Address used by "get in touch" on the homepage
 
   # Academic websites
   academia         : # URL
@@ -81,6 +81,21 @@ author:
   xing             : # Username
   youtube          : # Username
   zhihu            : # Username
+
+  # Full profile URLs. Empty entries stay visible without a link until an account is ready.
+  social_media:
+    - name: "Xiaohongshu"
+      icon: "xiaohongshu"
+      url: ""
+    - name: "YouTube"
+      icon: "youtube"
+      url: ""
+    - name: "Instagram"
+      icon: "instagram"
+      url: ""
+    - name: "TikTok"
+      icon: "tiktok"
+      url: ""
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:

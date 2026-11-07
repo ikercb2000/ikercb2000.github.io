@@ -24,7 +24,7 @@ I'm also a bit of an **economics and finance nerd**, but especially enthusiastic
 
 I also spend time on **science communication and educational outreach** through social media: explaining ideas, sharing what I learn and making technical topics more approachable. Whether the subject is mathematics, economics or finance, I love a good explanation and the conversations it can start.
 
-If you would like to talk about research, education, or an interesting idea in economics or finance, [get in touch](mailto:{{ site.author.email }})!
+If you would like to talk about research, education, or an interesting idea in economics or finance, [get in touch](mailto:{{ site.author.contact_email }})!
 
 ## News & events
 
@@ -32,13 +32,13 @@ If you would like to talk about research, education, or an interesting idea in e
   <li class="news-timeline__item">
     <time class="news-timeline__date" datetime="2026-10">Oct 2026</time>
     <div class="news-timeline__content">
-      <p>I participated in the <strong>Bristol Lean Focus Week</strong>, where <a href="https://www.imo.universite-paris-saclay.fr/~patrick.massot/">Dr Patrick Massot</a> presented different aspects of the Lean programming language and its applications in education.</p>
+      <p>I participated in the <strong><a href="https://www.bristolmathsresearch.org/meeting/bristol-lean-focus-week/">Bristol Lean Focus Week</a></strong>, where <a href="https://www.imo.universite-paris-saclay.fr/~patrick.massot/">Dr Patrick Massot</a> presented different aspects of the Lean programming language and its applications in education.</p>
     </div>
   </li>
   <li class="news-timeline__item">
     <time class="news-timeline__date" datetime="2026-09">Sep 2026</time>
     <div class="news-timeline__content">
-      <p>I attended the <strong>UoB &times; RIKEN AIP Workshop</strong> on recent advances in the foundations and applications of AI and machine learning.</p>
+      <p>I attended the <strong><a href="https://sites.google.com/view/uob-riken-aip-workshop/">UoB &times; RIKEN AIP Workshop</a></strong> on recent advances in the foundations and applications of AI and machine learning.</p>
     </div>
   </li>
 </ol>
