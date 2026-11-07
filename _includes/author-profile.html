@@ -30,9 +30,6 @@
       {% if author.employer %}
         <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{{ author.employer }}</li>
       {% endif %}
-      {% if author.uri %}
-        <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
-      {% endif %}
       {% if author.email %}
         <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
       {% endif %}
@@ -126,9 +123,6 @@
       {% if author.lastfm %}
         <li><a href="https://last.fm/user/{{ author.lastfm }}"><i class="fab fa-fw fa-lastfm icon-pad-right" aria-hidden="true"></i>Last.fm</a></li>
       {% endif %}      
-      {% if author.linkedin %}
-        <li><a href="https://www.linkedin.com/in/{{ author.linkedin }}"><i class="fab fa-fw fa-linkedin icon-pad-right" aria-hidden="true"></i>LinkedIn</a></li>
-      {% endif %}      
       {% if author.mastodon %}
         <li><a href="{{ author.mastodon }}"><i class="fab fa-fw fa-mastodon icon-pad-right" aria-hidden="true"></i>Mastodon</a></li>
       {% endif %}
@@ -174,10 +168,26 @@
     </ul>
   </div>
 
-  {% if author.social_media %}
+  {% if author.social_media or author.uri or author.linkedin %}
   <div class="author__social-media">
     <h4 class="author__social-heading">Social media</h4>
     <ul class="author__social-list">
+      {% if author.uri %}
+      <li>
+        <a class="author__social-link" href="{{ author.uri | escape }}">
+          <i class="fas fa-globe" aria-hidden="true"></i>
+          <span>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</span>
+        </a>
+      </li>
+      {% endif %}
+      {% if author.linkedin %}
+      <li>
+        <a class="author__social-link" href="https://www.linkedin.com/in/{{ author.linkedin | escape }}">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn</span>
+        </a>
+      </li>
+      {% endif %}
       {% for profile in author.social_media %}
       <li>
         {% if profile.url != blank %}
